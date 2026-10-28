@@ -1,0 +1,5 @@
+待删除文件/
+node_modules/
+.DS_Store
+Thumbs.db
+*.log

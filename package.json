@@ -1,0 +1,16 @@
+{
+  "name": "dsh-life-window",
+  "version": "0.6.2",
+  "description": "鲸鲸生活窗：真实会话状态、B站作息与有出处的生活时间线",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {".": "./lib/index.js", "./client": "./lib/client.js", "./package.json": "./package.json"},
+  "files": ["lib", "src", "web", "tools", "tests", "cordis.patch.yml", "README.md", "LICENSE"],
+  "scripts": {"build": "node tools/build.mjs", "test": "node --test tests/*.test.mjs", "demo": "node tools/server.mjs", "install:local": "node tools/install.mjs"},
+  "dsh": {
+    "bundle": {"patch": "./cordis.patch.yml"},
+    "engines": {"dsh": ">=0.1.1-rc.2"},
+    "client": {"inject": ["@deepseek-ai/dsh-client-runtime", "@deepseek-ai/dsh-client-connection", "@deepseek-ai/dsh-client-ui-conversation"], "platform": "web"}
+  },
+  "license": "MIT"
+}
